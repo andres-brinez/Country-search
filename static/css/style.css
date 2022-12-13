@@ -70,7 +70,7 @@ input#search::placeholder{
 
 #countries{
     margin-top: 170px;
-    border: solid 1px red ;
+    /* border: solid 1px red ; */
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
@@ -80,19 +80,38 @@ input#search::placeholder{
 }
 
 #countries .country{
-    border: solid 1px brown;
-    width: 20%;
+    background-color: rgb(221, 216, 216);
+    text-align: center;
+    width: 17%;
     margin: 40px 0;
     padding: 0 20px;
     cursor: pointer; 
+    border-radius: 32px;
+    
 }
+
+   
+    
+
 
 
 #countries .country .flag{
-    width: 100%;
-    height: 137px;
-    border: solid 1px green;
+    width: 70%;
+    height: 100px;
+    margin: 40px  auto 10px auto;
 }
+
+#countries .country .flag img{
+    width: 100%; 
+    height: 100%;
+    
+}
+
+
+.info-two{
+    display: none;
+}
+
 
 
 
