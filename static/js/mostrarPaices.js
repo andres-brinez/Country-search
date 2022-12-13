@@ -3,7 +3,6 @@ import { event } from './eventos.js'
 import { formNumber } from './eventos.js'
 
 
-
 getInformationApi().then(data =>{
     console.log(data)
     showInformation(data)
@@ -50,6 +49,28 @@ function showInformation (data){
 
     return 'mensajes cargados '
 }
+
+// BUSCAR Paid
+const btnSearch= document.getElementById('btn-search')
+btnSearch.addEventListener('click', () => {
+    const inputSearch = document.getElementById('input-search')
+    const value = inputSearch.value
+    
+
+    if (value === ''){
+        getInformationApi().then(data =>{
+            showInformation(data)
+        })
+    }
+    else{
+        getInformationApi(value).then(data =>{
+            showInformation(data)
+        })
+    }
+})
+
+
+// 
 
 
 
