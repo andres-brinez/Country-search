@@ -70,4 +70,29 @@ input#search::placeholder{
 
 #countries{
     margin-top: 170px;
+    border: solid 1px red ;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin: 0 10%;
+
+
 }
+
+#countries .country{
+    border: solid 1px brown;
+    width: 20%;
+    margin: 40px 0;
+    padding: 0 20px;
+    cursor: pointer; 
+}
+
+
+#countries .country .flag{
+    width: 100%;
+    height: 137px;
+    border: solid 1px green;
+}
+
+
+
