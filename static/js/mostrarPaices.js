@@ -1,4 +1,5 @@
 import {getInformationApi} from './API.js'
+import { event } from './eventos.js'
 
 
 
@@ -7,7 +8,7 @@ getInformationApi().then(data =>{
     showInformation(data)
 })
 
-function showInformation (data){
+export function showInformation (data){
 
     const countries = document.getElementById('countries')
     countries.innerHTML = ''
@@ -20,20 +21,26 @@ function showInformation (data){
         countryElement.classList.add('country')
 
         const countryInfo = `
+        
             <div>
                 <img class="flag" src="${flag}" alt="${name}">
-            </div>
+            </div> 
             <div class="country-info">
                 <h3 class="country-name">${name}</h3>
-                <p><strong>Population:</strong> ${population}</p>
-                <p class="country-region"><strong>Region:</strong> ${region}</p>
-                <p><strong>Capital:</strong> ${capital}</p>
+                <p class="country-region">${region}</p>
             </div>
         `
 
         countryElement.innerHTML = countryInfo
         countries.appendChild(countryElement)
+        
+        event()
     });
+
+    // <p><strong>Population:</strong> ${population}</p>
+    // <p><strong>Capital:</strong> ${capital}</p>
+
+    return 'mensajes cargados '
 }
 
 
