@@ -31,7 +31,7 @@ header{
 
 }
 
-input#search{
+#input-search{
     background-color: transparent;
     border: 2px #fff solid;
     border-radius: 26px;
