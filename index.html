@@ -5,31 +5,41 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" type="" href="./static/css/style.css" />
+    <link rel="stylesheet" href="./static/css/acordion.css" />
     <title>Paices</title>
   </head>
   <body>
     <h1>Country Search</h1>
-    <div class="box">
+    <header>
       <div class="search">
         <input type="text" id="search" placeholder="Search for a country..." />
-        <button id="btn">Search</button>
+        <img
+          src="https://cdn-icons-png.flaticon.com/512/639/639375.png"
+          id="btn-search"
+          alt="boton de buscar"
+        />
       </div>
       <div class="regions">
-        <ul class="nav">
-          <li>
-            <a href="">Servicios</a>
-            <ul>
-              <li><a href="">Submenu1</a></li>
-              <li><a href="">Submenu2</a></li>
-              <li><a href="">Submenu3</a></li>
-              
-            </ul>
-          </li>
-        </ul>
+        <div id="container-main">
+          <div class="accordion-container">
+              <a href="#"  onmouseover="OcultarMostrarContenido()" mouserover="OcultarMostrarContenido()" class="accordion-titulo" >Filtrar regiones<span class="toggle-icon"></span></a>
+              <div class="accordion-content">
+                <ul>
+                  <li><p class="region" id="africa">Africa</p></li>
+                  <li><p class="region">América</p></li>
+                  <li><p class="region">Asia</p></li>
+                  <li><p class="region">Europa</p></li>
+                  <li><p class="region">Oceania</p></li>
+                </ul>  
+              </div>  
+          </div>
+        </div>
       </div>
-    </div>
+    </header>
+    
 
     <div id="countries"></div>
-    <script type="module" src="./static/js/mostrarPaices.js"></script>
+    <script src="./static/js/acordion.js"></script>
+    <!-- <script type="module" src="./static/js/mostrarPaices.js"></script> -->
   </body>
 </html>
