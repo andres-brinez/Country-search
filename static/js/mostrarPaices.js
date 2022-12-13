@@ -50,12 +50,13 @@ function showInformation (data){
     return 'mensajes cargados '
 }
 
-// BUSCAR Paid
+// BUSCAR Pais
 const btnSearch= document.getElementById('btn-search')
 btnSearch.addEventListener('click', () => {
     const inputSearch = document.getElementById('input-search')
-    const value = inputSearch.value
-    
+    let value =inputSearch.value
+
+
 
     if (value === ''){
         getInformationApi().then(data =>{
@@ -63,11 +64,24 @@ btnSearch.addEventListener('click', () => {
         })
     }
     else{
-        getInformationApi(value).then(data =>{
+        getInformationApi(value,'name').then(data =>{
+            console.log(data)
             showInformation(data)
         })
     }
 })
+
+// FILTRAR POR REGION
+const regiones = document.getElementsByClassName('region')
+for (let i = 0; i < regiones.length; i++) {
+    regiones[i].addEventListener('click', () => {
+        const region = regiones[i].id
+        getInformationApi(region,'region').then(data =>{
+            showInformation(data)
+        })
+    })
+}
+
 
 
 // 
