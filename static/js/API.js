@@ -17,8 +17,6 @@ export const getInformationApi = async (name) => {
     return data
 }
 
-// getInformation('colombia').then (data => console.log(data))
-
 
 
 
