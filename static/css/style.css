@@ -14,10 +14,60 @@ h1{
     
 }
 
-.box{
+header{
     display: flex;
-    justify-content: center;
+    justify-content: space-around;
     /* align-items: center; */
     color: #fff;
+    width: 50%;
+    margin: 50px 25%;
+    ;
     
+}
+
+.search{
+    display: flex;
+    align-items: center;
+
+}
+
+input#search{
+    background-color: transparent;
+    border: 2px #fff solid;
+    border-radius: 26px;
+    height: 39px;
+    width: 266px;
+    padding: 8px 0px 8px 16px;
+    color: #FFFFFF;
+    font-size: 24px ;
+    font-weight: 300;
+}
+
+input#search:focus{
+    outline: none;
+}
+
+input#search::placeholder{
+    color: #757575;
+}
+
+
+#btn-search{
+   
+    height: 30px;
+    width: 30px;
+    cursor: pointer;
+    padding: 13px;
+    margin-left: 5px;
+
+}
+
+#btn-search:hover{
+    height: 33px;
+    width: 33px;
+}
+
+
+#countries{
+    margin-top: 170px;
 }
