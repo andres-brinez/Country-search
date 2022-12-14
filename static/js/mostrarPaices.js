@@ -1,7 +1,6 @@
 import {getInformationApi} from './API.js'
-import { event } from './eventos.js'
-import { formNumber } from './eventos.js'
-import { closeAcordion } from './acordion.js'
+import { eventContainer } from './eventos.js'
+import { formNumber } from '../utils/utils.js'
 
 const mensaje = document.getElementById('mensaje')
 
@@ -11,7 +10,7 @@ getInformationApi().then(data =>{
     showInformation(data)
 })
 
-function showInformation (data){
+export function showInformation (data){
 
     const countries = document.getElementById('countries')
     countries.innerHTML = ''
@@ -44,68 +43,17 @@ function showInformation (data){
 
         countryElement.innerHTML = countryInfo
         countries.appendChild(countryElement)
-        mensaje.textContent=''        
-        event(country)
+        mensaje.textContent=''  
+
+        eventContainer(country) // al cargar  la página y los paices se  puede hacer eventos sobre el 
     });
 
     
 
 }
 
-// BUSCAR Pais
-const btnSearch= document.getElementById('btn-search')
-btnSearch.addEventListener('click', () => {
-    const inputSearch = document.getElementById('input-search')
-    let value =inputSearch.value
 
 
-
-    if (value === ''){
-        getInformationApi().then(data =>{
-            showInformation(data)
-        })
-    }
-    else{
-        getInformationApi(value,'name').then(data =>{
-            console.log(data.status)
-
-            if (data.status === 404){
-                mensaje.textContent='No se encontró el pais, Verifica que el nombre esté en ingles '
-            
-            }
-            else{
-            showInformation(data)
-            }
-        })
-    }
-})
-
-// FILTRAR POR REGION
-const regiones = document.getElementsByClassName('region')
-for (let i = 0; i < regiones.length; i++) {
-    regiones[i].addEventListener('click', () => {
-        let parametro=''
-        const region = regiones[i].id
-
-        if (region !== 'all'){
-            parametro='region'
-        }
-        closeAcordion()
-        
-        getInformationApi(region,parametro).then(data =>{
-            showInformation(data)
-        })
-
-
-
-
-        
-    })
-}
-
-
-
-// 
 
 
 
