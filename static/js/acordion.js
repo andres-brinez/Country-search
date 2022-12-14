@@ -1,14 +1,29 @@
 
-function OcultarMostrarContenido() {
-    const titulo = document.getElementsByClassName('accordion-titulo')[0]
 
-    const contenido = document.getElementsByClassName('accordion-content')[0]
-    if (contenido.style.display === 'none') {
+ const titulo = document.getElementsByClassName('accordion-titulo')[0]
+ const contenido = document.getElementsByClassName('accordion-content')[0]
+ const menuRegions = document.getElementsByClassName('toggle-icon')[0]
+
+
+menuRegions.addEventListener('mouseover', () => {
+    if (document.getElementsByClassName('open')[0]===undefined){
         contenido.style.display = 'block'
         titulo.classList.add('open')
-    } else {
+    }
+    else{
         contenido.style.display = 'none'
         titulo.classList.remove('open')
     }
+    
+})
+
+export function closeAcordion(){
+    contenido.style.display = 'none'
+    titulo.classList.remove('open')
 }
+
+
+
+
+
 
