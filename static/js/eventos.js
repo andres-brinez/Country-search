@@ -2,6 +2,7 @@ export  function event (data){
     
     const container = document.getElementsByClassName('country')
     const flag = document.getElementsByClassName('flag')
+    const menuRegions= document.getElementsByClassName('regions')[0]
 
     // saber a cual container se paso el mouse
 
@@ -33,6 +34,9 @@ export  function event (data){
 
         })
     }
+
+   
+    
 
 }
 
