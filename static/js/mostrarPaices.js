@@ -1,6 +1,7 @@
 import {getInformationApi} from './API.js'
 import { event } from './eventos.js'
 import { formNumber } from './eventos.js'
+import { closeAcordion } from './acordion.js'
 
 
 getInformationApi().then(data =>{
@@ -82,10 +83,22 @@ btnSearch.addEventListener('click', () => {
 const regiones = document.getElementsByClassName('region')
 for (let i = 0; i < regiones.length; i++) {
     regiones[i].addEventListener('click', () => {
+        let parametro=''
         const region = regiones[i].id
-        getInformationApi(region,'region').then(data =>{
+
+        if (region !== 'all'){
+            parametro='region'
+        }
+        closeAcordion()
+        
+        getInformationApi(region,parametro).then(data =>{
             showInformation(data)
         })
+
+
+
+
+        
     })
 }
 
