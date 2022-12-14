@@ -65,8 +65,15 @@ btnSearch.addEventListener('click', () => {
     }
     else{
         getInformationApi(value,'name').then(data =>{
-            console.log(data)
+            console.log(data.status)
+
+            if (data.status === 404){
+                alert('No se encontró el pais, Verifica que el nombre esté en ingles ')
+            
+            }
+            else{
             showInformation(data)
+            }
         })
     }
 })
