@@ -1,4 +1,7 @@
+const mensaje = document.getElementById('mensaje')
+
 export const getInformationApi = async (name,query) => {
+    mensaje.textContent='CARGANDO INFORMACIÓN'
     let api= ""
     
     if (name==undefined){ // si no pasa parametros
