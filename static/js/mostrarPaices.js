@@ -3,9 +3,11 @@ import { event } from './eventos.js'
 import { formNumber } from './eventos.js'
 import { closeAcordion } from './acordion.js'
 
+const mensaje = document.getElementById('mensaje')
+
+
 
 getInformationApi().then(data =>{
-    console.log(data)
     showInformation(data)
 })
 
@@ -42,13 +44,12 @@ function showInformation (data){
 
         countryElement.innerHTML = countryInfo
         countries.appendChild(countryElement)
-        
+        mensaje.textContent=''        
         event(country)
     });
 
     
 
-    return 'mensajes cargados '
 }
 
 // BUSCAR Pais
@@ -69,7 +70,7 @@ btnSearch.addEventListener('click', () => {
             console.log(data.status)
 
             if (data.status === 404){
-                alert('No se encontró el pais, Verifica que el nombre esté en ingles ')
+                mensaje.textContent='No se encontró el pais, Verifica que el nombre esté en ingles '
             
             }
             else{
