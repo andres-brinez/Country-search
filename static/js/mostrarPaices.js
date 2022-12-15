@@ -13,6 +13,8 @@ getInformationApi().then(data =>{
 export function showInformationCountries (data){
 
     document.title ='REST Countries API'
+    document.getElementsByTagName('link')[0].attributes[1].textContent='https://cdn-icons-png.flaticon.com/512/921/921475.png'
+    
 
     h2.style.display='none'
 
