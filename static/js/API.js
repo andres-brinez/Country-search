@@ -16,7 +16,6 @@ export const getInformationApi = async (name,query) => {
     const response = await fetch(api)
     const data = await response.json()
 
-
     return data
 }
 

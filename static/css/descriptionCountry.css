@@ -1,0 +1,48 @@
+#detalles {
+    text-align: center;
+    color: #fff;
+    font-size: 40px;
+    border-top: 1px white solid;
+    width: 50%;
+    margin: 10px auto;
+    padding-top: 18px;
+}
+
+.countryInfo {
+    display: flex;
+    margin: 10px 10%;
+    justify-content: center;
+
+
+
+}
+
+.info {
+    width: 30%;
+    border: solid 1px #3f3636;
+    background-color: rgb(221, 216, 216);
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 8% 0;
+    align-content: center;
+    border-radius: 40px;
+
+
+
+
+    align-content: center;
+}
+
+.country__flag img {
+    width: 80%;
+    border: solid 1px green;
+    margin: 0 10%;
+}
+
+span {
+    font-size: 20px;
+    font-weight: bold;
+    color: #000;
+}

@@ -1,6 +1,7 @@
 import { closeAcordion } from './acordion.js'
-import {showInformation} from './mostrarPaices.js'
+import {showInformationCountries,showDetailsCountry} from './mostrarPaices.js'
 import {getInformationApi} from './API.js'
+
 
 
 const container = document.getElementsByClassName('country')
@@ -50,7 +51,8 @@ export  function eventContainer (data){
         container[i].addEventListener('click', () => {
             // obtener el nombre del pais
             const NameCountry=countryName[i].textContent
-            console.log(NameCountry)
+            showDetailsCountry(NameCountry)
+            // console.log(NameCountry)
             
 
         })
@@ -67,7 +69,7 @@ btnSearch.addEventListener('click', () => {
     // si no es escribe nada
     if (value === ''){
         getInformationApi().then(data =>{
-            showInformation(data)
+            showInformationCountries(data)
         })
     }
     else{
@@ -77,7 +79,7 @@ btnSearch.addEventListener('click', () => {
                 mensaje.textContent='No se encontró el pais, Verifica que el nombre esté en ingle '
             }
             else{
-            showInformation(data)
+            showInformationCountries(data)
             }
         })
     }
@@ -96,7 +98,7 @@ for (let i = 0; i < regiones.length; i++) {
         closeAcordion()
         
         getInformationApi(region,parametro).then(data =>{
-            showInformation(data)
+            showInformationCountries(data)
         })
 
 

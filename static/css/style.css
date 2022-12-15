@@ -74,6 +74,17 @@ input#search::placeholder{
     margin-top:  50px ;
 }
 
+#detalles{
+    text-align: center;
+    color: #fff;
+    font-size:  40px ;
+    display: none;
+    border-top: 1px white solid;
+    width: 50%;
+    margin: 10px auto;
+    padding-top: 18px;
+    
+}
 
 #countries{
     margin-top: 170px;
