@@ -1,7 +1,6 @@
-const mensaje = document.getElementById('mensaje')
-
 export const getInformationApi = async (name,query) => {
-    mensaje.textContent='CARGANDO INFORMACIÓN'
+    document.getElementById('mensaje').textContent='CARGANDO INFORMACIÓN'
+
     let api= ""
     
     if (name==undefined){ // si no pasa parametros
@@ -10,8 +9,6 @@ export const getInformationApi = async (name,query) => {
     else{
         api = `https://restcountries.com/v2/${query}/${name}`
     }
-
-    
 
     const response = await fetch(api)
     const data = await response.json()

@@ -52,7 +52,6 @@ export  function eventContainer (data){
             // obtener el nombre del pais
             const NameCountry=countryName[i].textContent
             showDetailsCountry(NameCountry)
-            // console.log(NameCountry)
             
 
         })

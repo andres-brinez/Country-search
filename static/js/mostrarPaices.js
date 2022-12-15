@@ -49,7 +49,7 @@ export function showInformationCountries (data){
         countries.appendChild(countryElement)
         mensaje.textContent=''  
 
-        eventContainer(country) // al cargar  la página y los paices se  puede hacer eventos sobre el 
+        eventContainer() // al cargar  la página y los paices se  puede hacer eventos sobre el 
     });
 
     
