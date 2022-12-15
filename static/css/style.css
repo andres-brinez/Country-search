@@ -130,6 +130,17 @@ input#search::placeholder{
     display: none;
 }
 
+footer {
+    margin-top: 50px;
+    color: #fff;
+    text-align: center;
+    font-size: 30px;
+    font-weight: bolder;
+    padding: 20px 0;
+    
+
+}
+
 
 
 
