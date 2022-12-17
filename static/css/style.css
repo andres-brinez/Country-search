@@ -88,7 +88,6 @@ input#search::placeholder{
 
 #countries{
     margin-top: 170px;
-    border: solid 1px red ;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
